@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Track() {
+function Track(props) {
     return (
         <div className='track'>
-            
+
         </div>
     )
 };

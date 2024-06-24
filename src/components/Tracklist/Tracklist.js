@@ -1,7 +1,7 @@
 import React from 'react';
 import Track from '../Track/Track';
 
-function Tracklist() {
+function Tracklist(props) {
 
     return (
         <div className='tracklist'>

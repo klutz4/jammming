@@ -27,11 +27,6 @@ const songs = [
         album: "Album 5"
       },
       {
-        title: "Title 1",
-        artist: "Artist 1",
-        album: "Album 1"
-      },
-      {
         title: "Title 6",
         artist: "Artist 6",
         album: "Album 6"
@@ -40,5 +35,10 @@ const songs = [
         title: "Title 7",
         artist: "Artist 7",
         album: "Album 7"
+      },
+      {
+        title: "Title 8",
+        artist: "Artist 8",
+        album: "Album 8"
       },
   ]

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { get } from './mockBackend/fetch';
+import { get } from '../../mockBackEnd/fetch';
 
 function SearchBar(props) {
     const [input, setInput] = useState('');
