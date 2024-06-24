@@ -8,16 +8,7 @@ export function get(endpoint) {
   const delay = Math.floor(Math.random() * 1000);
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (!tracks.hasOwnProperty(endpoint)) {
-        const validEndpoints = Object.keys(tracks)
-          .map((endpoint) => ` - "${endpoint}"`)
-          .join("\n ");
-        reject(
-          `"${endpoint}" is an invalid endpoint. Try getting data from: \n ${validEndpoints}`
-        );
-      }
-
-      const response = { status: 200, data: tracks[endpoint] };
+      const response = { status: 200, data: tracks };
 
       resolve(response);
     }, delay);
