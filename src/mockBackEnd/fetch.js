@@ -4,7 +4,7 @@
 
 import tracks from "./data";
 
-export function get(endpoint) {
+export function get() {
   const delay = Math.floor(Math.random() * 1000);
   return new Promise((resolve, reject) => {
     setTimeout(() => {

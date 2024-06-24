@@ -5,9 +5,18 @@ function Tracklist(props) {
 
     return (
         <div className='tracklist'>
-            <Track />
+        {props.tracks.map((track) => {
+       
+        return (
+            <Track 
+            track={track}
+            key={track.id}
+            />
+             );
+            })}                
+
         </div>
-    )
+    );
 };
 
 export default Tracklist;
