@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Tracklist from '../Tracklist/Tracklist';
 
 function Playlist(props) {
+    const [playlistName, setPlaylistName] = useState('New Playlist');
+
+    const handleChange = (event) => {
+        setPlaylistName(event.target.value)
+    }
+
     return (
         <div className='playlist'>
-            <h2><input placeholder="Playlist Title"/></h2>
+            <input value={playlistName} onChange={handleChange}/>
+            <Tracklist 
+            tracks={props.playlistTracks}
+            onRemove={props.onRemove}
+            canBeAdded={props.canBeAdded}/>
             <button>Save to Spotify</button>
         </div>
     )
