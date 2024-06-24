@@ -1,6 +1,6 @@
 // fake data
 
-const songs = [
+const tracks = [
     {
         "album": {
             "name": "Album 1",
@@ -60,7 +60,7 @@ const songs = [
         ],
         "id": "5",
         "name": "Track 5",
-      }
+      },
       {
         "album": {
             "name": "Album 6",
