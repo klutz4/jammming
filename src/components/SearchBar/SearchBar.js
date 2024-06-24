@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 
 
 function SearchBar(props) {
     const [input, setInput] = useState('');
 
-    const handleInputChange = event => {
+    const handleInputChange = useCallback((event) => {
         setInput(event.target.value);
-    };
+    }, []);
 
 
 

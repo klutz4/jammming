@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 function Track(props) {
 
-    const addTrack = (track) => {
+    const addTrack = useCallback((track) => {
         props.onAdd(props.track);
-    }
+    },[props.onAdd, props.track])
 
-    const removeTrack = (track) => {
+    const removeTrack = useCallback((track) => {
         props.onRemove(props.track);
-    }
+    },[props.onRemove, props.track]);
 
     const addOrRemoveIcon = () => {
         if (props.canBeAdded) {

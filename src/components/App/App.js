@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './App.css';
 
 import SearchBar from '../SearchBar/SearchBar';
@@ -12,6 +12,7 @@ import tracks from '../../mockBackEnd/data';
 function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [playlistName, setPlaylistName] = useState('New Playlist');
 
   const search = () => {
     get().then((response) => {
@@ -21,18 +22,27 @@ function App() {
     
   }
 
-  const addTrack = (track) => {
+  const addTrack = useCallback((track) => {
     setPlaylistTracks((prev) => [track, ...prev]);
-  }
+  },[playlistTracks]);
 
-  const removeTrack = (track) => {
+  const removeTrack = useCallback((track) => {
     setPlaylistTracks(((prev) => prev.filter((currentTrack) => 
       currentTrack.id !== track.id)))
-  }
+  },[]);
 
-  const savePlaylist = () => {
-    
-  }
+  const updatePlaylistName = useCallback((name) => {
+    setPlaylistName(name);
+  },[]);
+
+  const savePlaylist = useCallback(() => {
+    const trackUris = playlistTracks.map((track) => track.uri);
+    // save to Spotify
+
+    // reset playlist tracks and name
+    setPlaylistName('New Playlist');
+    setPlaylistTracks([]);
+  },[playlistName, playlistTracks]);
 
   return (
     <div>
@@ -45,7 +55,9 @@ function App() {
           onAdd={addTrack} 
           canBeAdded={true}/>
           <Playlist 
+          playlistName={playlistName}
           playlistTracks={playlistTracks}
+          onNameChange={updatePlaylistName}
           onRemove={removeTrack}
           onSave={savePlaylist}
           canBeAdded={false}/>
