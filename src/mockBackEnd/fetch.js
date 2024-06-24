@@ -8,7 +8,7 @@ export function get(endpoint) {
   const delay = Math.floor(Math.random() * 1000);
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (!DATA.hasOwnProperty(endpoint)) {
+      if (!tracks.hasOwnProperty(endpoint)) {
         const validEndpoints = Object.keys(tracks)
           .map((endpoint) => ` - "${endpoint}"`)
           .join("\n ");
@@ -17,7 +17,7 @@ export function get(endpoint) {
         );
       }
 
-      const response = { status: 200, data: DATA[endpoint] };
+      const response = { status: 200, data: tracks[endpoint] };
 
       resolve(response);
     }, delay);
