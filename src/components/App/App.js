@@ -1,10 +1,7 @@
-import logo from '../logo.svg';
-import '../styles/App.css';
-import SearchBar from './SearchBar';
-import SearchResults from './SearchResults';
-import Playlist from './Playlist';
-import Track from './Track';
-import Tracklist from './Tracklist';
+import './App.css';
+import SearchBar from '../SearchBar/SearchBar';
+import SearchResults from '../SearchResults/SearchResults';
+import Playlist from '../Playlist/Playlist';
 
 function App() {
   return (
@@ -12,10 +9,13 @@ function App() {
       <header className="App-header">
         <h1>jammming</h1>
       </header>
-      <main>
-      <SearchBar />
-      
-      </main>
+      <div className='app'>
+        <SearchBar />
+        <div className='app-playlist'>
+          <SearchResults />
+          <Playlist />
+        </div>
+      </div>
     </div>
   );
 }
