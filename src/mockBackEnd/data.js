@@ -2,51 +2,100 @@
 
 const songs = [
     {
-      title: "Title 1",
-      artist: "Artist 1",
-      album: "Album 1",
-      id: '1',
-    },
-    {
-        title: "Title 2",
-        artist: "Artist 2",
-        album: "Album 2",
-        id: '2',
+        "album": {
+            "name": "Album 1",
+        },
+        "artists": [
+            {
+            "name": "Artist 1",
+            }
+        ],
+        "id": "1",
+        "name": "Track 1",
       },
       {
-        title: "Title 3",
-        artist: "Artist 3",
-        album: "Album 3",
-        id: '3',
+        "album": {
+            "name": "Album 2",
+        },
+        "artists": [
+            {
+            "name": "Artist 2",
+            }
+        ],
+        "id": "2",
+        "name": "Track 2",
       },
       {
-        title: "Title 4",
-        artist: "Artist 4",
-        album: "Album 4",
-        id: '4',
+        "album": {
+            "name": "Album 3",
+        },
+        "artists": [
+            {
+            "name": "Artist 3",
+            }
+        ],
+        "id": "3",
+        "name": "Track 3",
       },
       {
-        title: "Title 5",
-        artist: "Artist 5",
-        album: "Album 5",
-        id: '5',
+        "album": {
+            "name": "Album 4",
+        },
+        "artists": [
+            {
+            "name": "Artist 4",
+            }
+        ],
+        "id": "4",
+        "name": "Track 4",
       },
       {
-        title: "Title 6",
-        artist: "Artist 6",
-        album: "Album 6",
-        id: '6',
+        "album": {
+            "name": "Album 5",
+        },
+        "artists": [
+            {
+            "name": "Artist 5",
+            }
+        ],
+        "id": "5",
+        "name": "Track 5",
+      }
+      {
+        "album": {
+            "name": "Album 6",
+        },
+        "artists": [
+            {
+            "name": "Artist 6",
+            }
+        ],
+        "id": "6",
+        "name": "Track 6",
       },
       {
-        title: "Title 7",
-        artist: "Artist 7",
-        album: "Album 7",
-        id: '7',
+        "album": {
+            "name": "Album 7",
+        },
+        "artists": [
+            {
+            "name": "Artist 7",
+            }
+        ],
+        "id": "7",
+        "name": "Track 7",
       },
       {
-        title: "Title 8",
-        artist: "Artist 8",
-        album: "Album 8",
-        id: '8',
+        "album": {
+            "name": "Album 8",
+        },
+        "artists": [
+            {
+            "name": "Artist 8",
+            }
+        ],
+        "id": "8",
+        "name": "Track 8",
       },
   ]
+
