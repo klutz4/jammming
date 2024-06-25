@@ -4,22 +4,19 @@ import './App.css';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
+import Spotify from '../../util/Spotify';
 
 // for testing
-import { get } from '../../mockBackEnd/fetch';
-import tracks from '../../mockBackEnd/data';
+// import { get } from '../../mockBackEnd/fetch';
+// import tracks from '../../mockBackEnd/data';
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [playlistName, setPlaylistName] = useState('New Playlist');
 
-  const search = () => {
-    get().then((response) => {
-        alert('Response: ' + JSON.stringify(response,'',2))
-        setSearchResults(response.data);
-    });
-    
+  const search = (input) => {
+    Spotify.search(input).then(setSearchResults);
   }
 
   const addTrack = useCallback((track) => {
@@ -38,10 +35,12 @@ function App() {
   const savePlaylist = useCallback(() => {
     const trackUris = playlistTracks.map((track) => track.uri);
     // save to Spotify
-
-    // reset playlist tracks and name
-    setPlaylistName('New Playlist');
-    setPlaylistTracks([]);
+    Spotify.savePlaylist(playlistName, trackUris).then( () => {
+      // reset playlist tracks and name
+      setPlaylistName('New Playlist');
+      setPlaylistTracks([]);
+    }
+  )
   },[playlistName, playlistTracks]);
 
   return (
