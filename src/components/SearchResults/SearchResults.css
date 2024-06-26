@@ -1,0 +1,12 @@
+.search-results {
+    height: 700px;
+    width: 90%;
+    background-color: rgba(29,29,21,0.8);
+    border: dashed 1px #fcc600;
+}
+
+.track-list {
+    height: 600px;
+    overflow: scroll;
+
+}

@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import Tracklist from '../Tracklist/Tracklist';
+import './Playlist.css';
 
 function Playlist(props) {
 
@@ -9,12 +10,12 @@ function Playlist(props) {
 
     return (
         <div className='playlist'>
-            <input onChange={handleNameChange} value={props.playlistName}/>
+            <h2><input className='playlist-name' onChange={handleNameChange} value={props.playlistName}/></h2>
             <Tracklist 
             tracks={props.playlistTracks}
             onRemove={props.onRemove}
             canBeAdded={props.canBeAdded}/>
-            <button onClick={props.onSave}>Save to Spotify</button>
+            <button className='save-button' onClick={props.onSave}>Save to Spotify</button>
         </div>
     )
 };

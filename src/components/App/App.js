@@ -45,7 +45,9 @@ function App() {
 
   return (
     <div>
-      <h1>jammming</h1>
+      <header>
+        <h1>ja<span>mmm</span>ing</h1>
+      </header>
       <div className='app'>
         <SearchBar onSearch={search}/>
         <div className='app-playlist'>
@@ -62,6 +64,7 @@ function App() {
           canBeAdded={false}/>
         </div>
       </div>
+      <footer>Created by Kelly Lutz.</footer>
       </div>
   );
 }

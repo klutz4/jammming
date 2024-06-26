@@ -1,0 +1,16 @@
+.playlist {
+    width: 90%;
+    height: 700px;
+    overflow: scroll;
+    background-color: rgba(29,29,21,0.8);
+    border: dashed 1px #fcc600;
+}
+
+.playlist-name {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #fcc600;
+    color: white;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,20 @@
+.track {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px rgb(128,155,181);
+    align-items: center;
+}
+
+.track-info {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+p {
+    font-size: 0.75rem;
+}
+
+.addOrRemove {
+    height: 30%;
+}

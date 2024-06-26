@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import './Track.css';
 
 function Track(props) {
 
@@ -13,23 +14,22 @@ function Track(props) {
     const addOrRemoveIcon = () => {
         if (props.canBeAdded) {
             return (
-                <button onClick={addTrack}> Add </button>
+                <button className='addOrRemove' onClick={addTrack}> Add </button>
             )
         } else {
            return ( 
-           <button onClick={removeTrack}> Remove </button>
+           <button className='addOrRemove' onClick={removeTrack}> Remove </button>
         )
         }
     }
 
     return (
         <div className='track'>
-        <h3>{props.track.name}</h3>
-        <p>Artist: {props.track.artist}</p>
-        <p>Album: {props.track.album}</p>
-        {/* {addOrRemoveIcon}
-         */}
-        {addOrRemoveIcon()}
+            <div className='track-info'>
+                <h3>{props.track.name}</h3>
+                <p>Artist: {props.track.artist} | Album: {props.track.album}</p>
+            </div>
+            {addOrRemoveIcon()}
         </div>
     )
 };
