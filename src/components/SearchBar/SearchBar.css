@@ -1,7 +1,8 @@
 .search-bar {
-    margin-bottom: 1.5rem;;
+    margin-bottom: 1.5rem;
 }
 
 input {
     min-width: 9rem;
+    margin-bottom: 0.5rem;
 }

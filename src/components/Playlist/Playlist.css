@@ -1,6 +1,7 @@
 .playlist {
     width: 90%;
     height: 700px;
+    justify-self: center;
     overflow: scroll;
     background-color: rgba(29,29,21,0.8);
     border: dashed 1px #fcc600;
