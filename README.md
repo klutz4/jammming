@@ -19,6 +19,7 @@ Once you're satisfied with your playlist, you can click the 'Save to Spotify' bu
 - Users can create a custom playlist and export it to their personal Spotify account.
 
 ## Future Work
+- Add section to show who is logged in.
 - Add media queries for use on smaller screens (currently works best on desktop).
 - Improve responsive design.
 - Add more search options
