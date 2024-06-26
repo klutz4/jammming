@@ -26,10 +26,13 @@ header, footer {
   background-color: rgba(29,29,21,255);
   color: #ebeff9;
   text-align: center;
+  min-height: 50px;
+}
+
+header {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50px;
 }
 
 span {
@@ -46,4 +49,12 @@ button {
 button:hover {
   color: #3d4f59;
   background-color: white;
+}
+
+a {
+  color: #fcc600;
+}
+
+a:hover {
+  color: rgb(128,155,181);
 }

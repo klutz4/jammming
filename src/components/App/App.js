@@ -21,7 +21,7 @@ function App() {
 
   const addTrack = useCallback((track) => {
     setPlaylistTracks((prev) => [track, ...prev]);
-  },[playlistTracks]);
+  },[]);
 
   const removeTrack = useCallback((track) => {
     setPlaylistTracks(((prev) => prev.filter((currentTrack) => 
@@ -64,7 +64,9 @@ function App() {
           canBeAdded={false}/>
         </div>
       </div>
-      <footer>Created by Kelly Lutz.</footer>
+      <footer><p>Created by Kelly Lutz.</p>
+        <p><a href="https://github.com/klutz4/jammming" target="_blank" rel="noreferrer">View code here.</a></p>
+        </footer>
       </div>
   );
 }
