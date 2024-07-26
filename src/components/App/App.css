@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  padding-left: 2rem;
   font-size: 2rem;
 }
 
@@ -26,13 +27,14 @@ header, footer {
   background-color: rgba(29,29,21,255);
   color: #ebeff9;
   text-align: center;
-  min-height: 50px;
+  min-height: 40px;
 }
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 span {

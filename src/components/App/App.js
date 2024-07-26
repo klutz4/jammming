@@ -5,6 +5,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 import Spotify from '../../util/Spotify';
+import Profile from '../Profile/Profile';
 
 // for testing
 // import { get } from '../../mockBackEnd/fetch';
@@ -14,9 +15,19 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [playlistName, setPlaylistName] = useState('New Playlist');
+  const [profile, setProfile] = useState({displayName: 'Guest', imgURL: ''});
+
+  const logIn = () => {
+    Spotify.fetchProfile().then(setProfile);
+  };
+
+  const logOut = () => {
+    setProfile({displayName: 'Guest', imgURL: ''});
+  };
 
   const search = (input) => {
     Spotify.search(input).then(setSearchResults);
+    Spotify.fetchProfile().then(setProfile);
   }
 
   const addTrack = useCallback((track) => {
@@ -47,6 +58,10 @@ function App() {
     <div>
       <header>
         <h1>ja<span>mmm</span>ing</h1>
+        <Profile 
+          profile={profile}
+          onLogIn={logIn}
+          onLogOut={logOut}/>
       </header>
       <div className='app'>
         <SearchBar onSearch={search}/>
