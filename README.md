@@ -17,9 +17,10 @@ Once you're satisfied with your playlist, you can click the 'Save to Spotify' bu
 - Users can search for songs by song title.
 - Users can see the song title, artist, and album for each song.
 - Users can create a custom playlist and export it to their personal Spotify account.
+- Users can see who is logged in at the top right corner. (Log out does not actually log the user out, but once the user searches for a track, their profile will be populated).
 
 ## Future Work
-- Add section to show who is logged in.
+- Integrate a log out feature so multiple users can use the app.
 - Add media queries for use on smaller screens (currently works best on desktop).
 - Improve responsive design.
 - Add more search options
