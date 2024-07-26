@@ -1,4 +1,5 @@
 # Jammming Playlist App
+Try the app [here](https://kelly-jammming.netlify.app/)
 
 ## Project Purpose
 This app allows you to search for songs from Spotify and create a new playlist.
