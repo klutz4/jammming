@@ -1,4 +1,4 @@
-const clientId = "073742cdd42e4f4ca88fe832552c19d7";
+const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
 const redirectUri = "http://localhost:3000/";
 const scope = "user-read-private user-read-email playlist-modify-public";
 
